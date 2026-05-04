@@ -1,0 +1,61 @@
+@use "../usual.scss" as *;
+.top20 {
+  padding-top: 100px;
+  padding-bottom: 50px;
+
+  &__title {
+    margin-bottom: calc(100vw / 750 * 20);
+    color: $orange;
+    font-weight: 900;
+    font-size: calc(100vw / 750 * 20);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow:
+      0 0 5px rgba(255, 122, 0, 0.6),
+      0 0 10px rgba(255, 122, 0, 0.4),
+      0 0 20px rgba(255, 122, 0, 0.2);
+
+    @media (min-width: 1250px) {
+      margin-bottom: 40px;
+      font-size: 40px;
+    }
+  }
+
+  &__film-title {
+    width: fit-content;
+    display: block;
+    font-size: calc(100vw / 750 * 20);
+    margin-bottom: calc(100vw / 750 * 10);
+    @media (min-width: 1250px) {
+      margin-bottom: 30px;
+      font-size: 40px;
+    }
+  }
+
+  &__img {
+    margin-bottom: calc(100vw / 750 * 10);
+    @media (min-width: 1250px) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__subcontainer {
+    width: fit-content;
+    display: block;
+  }
+}
+
+.swiper {
+  &-slide {
+    background: $black-200;
+    border: 1px solid $black-300;
+    border-radius: 10px;
+    padding: calc(100vw / 750 * 10);
+    color: $white;
+    font-weight: 500;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+    @media (min-width: 1250px) {
+      padding: 20px;
+    }
+  }
+}

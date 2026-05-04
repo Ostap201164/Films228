@@ -1,0 +1,71 @@
+@use "../usual.scss" as *;
+.moviesByGenre {
+  padding-top: 100px;
+  &__button-container {
+    margin-bottom: 30px;
+    column-gap: calc(100vw / 750 * 10);
+    row-gap: calc(100vw / 750 * 10);
+    display: flex;
+    flex-wrap: wrap;
+    @media (min-width: 1250px) {
+      display: grid;
+      column-gap: 20px;
+      row-gap: 20px;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: repeat(5, 50px);
+    }
+  }
+
+  &__container-item {
+    border-radius: 5px;
+      color: $white;
+      background-color: $black-100;
+      @media (max-width: 1249px) {
+        padding: 5px;
+        
+      }
+  }
+
+  &__films-container {
+    display: flex;
+    width: 720px;
+    flex-wrap: wrap;
+    margin-bottom: calc(100vw / 750 * 30);
+    column-gap: calc(100vw / 750 * 20);
+    row-gap: calc(100vw / 750 * 20);
+    @media (min-width: 1250px) {
+      width: 1200px;
+      margin-bottom: 60px;
+      justify-content: center;
+    }
+  }
+
+  &__film-item {
+    background: $black-200;
+    border: 1px solid $black-300;
+    border-radius: 10px;
+    padding: calc(100vw / 750 * 10);
+    color: $white;
+    font-weight: 500;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+    @media (min-width: 1250px) {
+      padding: 20px;
+    }
+  }
+
+&__pagination{
+  display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+  &__pagination-button{
+    background-color: $black-100;
+    color: $white;
+    border-radius: 5px;
+    padding: calc(100vw / 750 * 5);
+@media (min-width: 1250px) {
+  padding: 12px;
+}
+  }
+}
