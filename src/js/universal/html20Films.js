@@ -21,6 +21,8 @@ export async function genre20Films(arr) {
   
   
   let text = "";
+  console.log(arr);
+  
   arr.forEach((item) => {
     text += genre20Html(
       `${imgUrl}w200`,
