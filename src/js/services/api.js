@@ -1,6 +1,7 @@
 import axios from "axios";
 const api = import.meta.env.VITE_API_KEY;
 const baseUrl = import.meta.env.VITE_BASE_URL;
+console.log(api);
 
 export async function getTop20() {
   try {
