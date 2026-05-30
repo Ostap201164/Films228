@@ -7,14 +7,19 @@ on:
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
+    environment: production  # ← назва твого середовища з GitHub
     steps:
-      - name: Checkout 🛎️
+      - name: Checkout 🛎
         uses: actions/checkout@v2.3.1
 
       - name: Install and build 🔧
         run: |
           npm install
           npm run build
+        env:
+          VITE_API_KEY: ${{ secrets.VITE_API_KEY }}
+          VITE_BASE_URL: ${{ vars.VITE_BASE_URL }}
+          VITE_IMG_URL: ${{ vars.VITE_IMG_URL }}
 
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@4.1.0
