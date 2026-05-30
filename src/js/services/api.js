@@ -1,7 +1,8 @@
 import axios from "axios";
 const api = import.meta.env.VITE_API_KEY;
 const baseUrl = import.meta.env.VITE_BASE_URL;
-console.log(api);
+const imgUrl = import.meta.env.VITE_IMG_URL;
+console.log(api, baseUrl, imgUrl);
 
 export async function getTop20() {
   try {
@@ -48,7 +49,7 @@ export async function findByIdFirst(id, controller) {
   try {
     const res = await axios.get(
       `${baseUrl}/discover/movie?with_genres=${id}&language=en-US&api_key=${api}&page=1`,
-      {signal: controller.signal}
+      { signal: controller.signal },
     );
 
     console.log(res.data.results);
