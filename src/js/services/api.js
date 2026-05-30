@@ -2,7 +2,9 @@ import axios from "axios";
 const api = import.meta.env.VITE_API_KEY;
 const baseUrl = import.meta.env.VITE_BASE_URL;
 const imgUrl = import.meta.env.VITE_IMG_URL;
-console.log(api, baseUrl, imgUrl);
+console.log("api",api);
+console.log("baseUrl",baseUrl);
+console.log("imgUrl",imgUrl);
 
 export async function getTop20() {
   try {
