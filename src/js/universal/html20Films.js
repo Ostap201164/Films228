@@ -1,28 +1,27 @@
-
-import { top20Html, genre20Html } from "./html.js";
+import { filmsHomeHtml } from "./html.js";
 export const imgUrl = import.meta.env.VITE_IMG_URL;
-console.log(imgUrl);
 
-export async function top20Films(arr) {
+export async function text20films(arr, importedClass, width) {
   let text = "";
+
   arr.forEach((item) => {
-    text += top20Html(
-      `${imgUrl}w400`,
-      item.backdrop_path,
-      item.original_title,
-      item.vote_average,
-    );
+    const obj = {
+      baseImg: `${imgUrl}w${width}`,
+      img: item.backdrop_path,
+      title: item.original_title,
+      rating: item.vote_average,
+      htmlClass: importedClass,
+    };
+    text += filmsHomeHtml(obj);
   });
 
   return text;
 }
 
+/*
 export async function genre20Films(arr) {
-  
-  
   let text = "";
-  console.log(arr);
-  
+
   arr.forEach((item) => {
     text += genre20Html(
       `${imgUrl}w200`,
@@ -34,3 +33,4 @@ export async function genre20Films(arr) {
 
   return text;
 }
+*/

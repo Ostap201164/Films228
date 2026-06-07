@@ -47,14 +47,14 @@ padding: 30px;
     }
   }
 
-  &__raiting {
+  &__rating {
     margin-bottom: (100vw / 750 * 10);
         @media (min-width: 1250px) {
       margin-bottom: 30px;
     }
   }
 
-  &__desription {
+  &__description {
     font-size: (100vw / 750 * 15);
         @media (min-width: 1250px) {
       font-size: 35px;
